@@ -17,9 +17,9 @@ for line in history_file:
         t_eff.append(row[2])
         lumin.append(row[4])
         
-plt.xlabel("temper")
-plt.ylabel("luminositytyt")
-plt.title("idk what fuckin hw this is")
+plt.xlabel("temperature")
+plt.ylabel("luminosity")
+plt.title("Homework??")
 
 plt.plot(t_eff[0:50],lumin[0:50])
 plt.show()
