@@ -7,7 +7,8 @@ from decimal import Decimal
 
 G = 6.67e-8 # cm3 / (g*s2)
 Rs = 6.96e10 # cm
-Ms = 1.99e33 # g
+
+
 
 M1 = 0.8
 M2 = 0.2 
@@ -42,12 +43,17 @@ plt.ylim((-20,1))
 
 
 # -------- q3 -------
+c = 3e10 # speed of light, cm/s
+Ms = 1.99e33 # g
 
 Ledd = 3.2e4 * 10e-4 * 3.9e33 # eddington lumin in erg/s, kes = k
+energy_per_rxn = 0.03 * 1.67e-24 * c**2 # energy released in 4H -> He
+
 # nuclear energy
-num_H = 10e-4*Ms / 1.67e-24
-energy_per_6_H = 4.282618e-5
-energy = num_H/6 * energy_per_6_H
+num_H = 10**(-4)*Ms / 1.67e-24
+
+energy = num_H/4 * energy_per_rxn # total energy: number of hydrogen atoms
+    # in this mass, divided by 4 because 4 H used per rxn, times energy per rxn
 time_s = 1/Ledd * energy
 time_y = time_s / 3.154e+7
 print('%.2E' % Decimal(time_y) + " years")
