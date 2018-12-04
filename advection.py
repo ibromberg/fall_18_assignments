@@ -66,7 +66,7 @@ for t in range(1,int(max_tstep)):
 plt.plot(x,f_new,label="Upwind Scheme",color='black')
 plt.plot(x,f_th,label="Top Hat",color='red')
 
-plt.xlabel("Time")
-plt.ylabel("Space?")
+plt.xlabel("x")
+plt.ylabel("speed")
 plt.title("Advection Scheme")
 plt.legend()
